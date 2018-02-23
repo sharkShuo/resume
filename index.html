@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <style>
+        .section {
+            text-align: center;
+            font: 50px "Microsoft Yahei";
+            color: #fff;
+        }
+
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        #dowebok {
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .one p {
+            font-size: 0.19rem;
+        }
+
+        .hh {
+            width: 12rem;
+            height: 0.9rem;
+            margin: 0.8rem auto;
+        }
+
+        .two h4 {
+            font-size: 0.4rem;
+            display: none;
+        }
+
+        .person {
+            width: 24rem;
+            height: 10rem;
+            margin-top: 0.8rem;
+            position: relative;
+        }
+
+        .intro {
+            width: 6rem;
+            height: 6rem;
+            float: left;
+            position: absolute;
+            left: -10rem;
+        }
+
+        .now .intro {
+            left: 0.4rem;
+            transition: all 1s;
+        }
+
+        .intro li {
+            font-size: .21rem;
+            text-align: left;
+            margin-left: 3rem;
+            margin-bottom: 0.1rem;
+        }
+        .hc{
+            width: 12rem;
+            height: 0.9rem;
+            margin: 0.8rem auto;
+        }
+        .tec {
+            float: left;
+            width: 6rem;
+            height: 8rem;
+            text-align: left;
+            margin-left: 2rem;
+            position: absolute;
+            right: -300px;
+        }
+
+        .now .tec {
+            right: 10rem;
+            transition: all 1s;
+        }
+
+        .tec li {
+            font-size: 0.21rem;
+        }
+
+        .tec li h5 {
+            font-size: 0.25rem;
+        }
+
+        .three {
+            position: relative;
+            width: 12rem;
+            height: 9rem;
+            margin: 0 auto;
+        }
+
+        .three h4 {
+            font-size:0.4rem;
+            margin-top: 0.2rem;
+            position: absolute;
+            left: -500px;
+            top: 1rem;
+        }
+
+        .three.now h4 {
+            left: 5rem;
+            transition: all 1s;
+        }
+
+        .exp {
+            width: 6rem;
+            height: 9rem;
+            margin-top: 0.3rem;
+            left: -500px;
+            top: 2rem;
+            position: absolute;
+        }
+
+        .three.now .exp {
+            left: 5rem;
+            transition: all 2s;
+        }
+
+        .blog {
+            width: 4rem;
+            height: 2rem;
+            text-align: left;
+            font-size: 0.3rem;
+            margin-top: 0.7rem;
+        }
+
+        
+        .blog a {
+            color: #fff;
+        }
+
+        .work {
+            width: 6rem;
+            height: 3rem;
+            text-align: left;
+        }
+        .work h5 {
+            font-size: 0.3rem;
+        }
+        .work p{
+            font-size:0.3rem
+        }
+        .four{
+            width: 12rem;
+            height: 9rem;
+            margin: 0 auto;
+        }
+        .hp{
+            width: 12rem;
+            height: 0.9rem;
+            margin: 0 auto;
+        }
+        .project{
+            width:10rem;
+            height:3rem;
+            margin-left: 2.5rem;
+        }
+        .project p{
+            font-size: 0.21rem;
+            margin-bottom: 0.6rem;
+            color: #fff;
+        }
+        .project span{
+            color: #fff;
+            font-size: 0.25rem;
+        }
+        .hp h4{
+            font-size: 0.8rem;
+        }
+        .five {
+            position: relative;
+            overflow:hidden;
+            width: 12rem;
+            height: 9rem;
+            margin: 0 auto;
+        }
+
+        .line {
+            width: 0;
+            height: 2px;
+            background-color: #ccc;
+        }
+
+        .now .line {
+            width: 100%;
+            transition: all 1.5s;
+        }
+
+        .code {
+            width: 6rem;
+            height: 6rem;
+            margin: 0 auto;
+            position: absolute;
+            top: 2000px;
+            left: 4.2rem;
+        }
+
+        .now .code {
+            top: 2rem;
+            transition: all 1s;
+        }
+
+        .code h4 {
+            margin-top: 0.3rem;
+            font-size: 0.4rem;
+        }
+        .code p{
+            font-size: 0.2rem;
+        }
+        .code span {
+            font-size: 0.35rem;
+        }
+
+        .lasth {
+            width: 100%;
+            height: 0.9rem;
+            margin: 0.8rem auto;
+            position: absolute;
+            top:-200px;
+        }
+
+        .now .lasth {
+            top: -0.5rem;
+            transition: all 1s;
+        }
+        #fp-nav li {
+            margin: 35px !important;
+        }
+        #fp-nav li span{
+            width:1rem !important;
+            height: 0.5rem !important;
+            border : 1px solid #fff !important;
+            border-radius:0 !important; 
+            left:-0.35rem !important;
+            margin-bottom: 10px;
+            top: -40 !important;
+            background-color: #fff;
+            font-size: 0.145rem;
+            line-height: 0.5rem;
+            text-align: center;
+            font-family: 微软雅黑;
+            font-weight: 700;
+            color: #0b5740;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dowebok">
+        <div class="section one">
+            <div class='hh'><h3>Fight Code</h3></div>
+            <p>所有的一切从这一步开始</p>
+        </div>
+        <div class="section two">
+            <div class='hh'>
+                <h4>Personal Introduction</h4>
+            </div>
+
+            <div class='person'>
+                <ul class='intro'>
+                    <li>姓名|余健</li>
+                    <li>别名|鲨鱼、余烁</li>
+                    <li>年龄|25</li>
+                    <li>手机|13621896460</li>
+                    <li>邮箱|sharkjan@163.com</li>
+                </ul>
+                <ul class='tec'>
+                    <li>
+                        <h5>HTML&CSS</h5>能够使用html,css,写出W3C标准页面，并且兼容主流浏览器</li>
+                    <li>
+                        <h5>Javascript</h5>精通javascript,jquery，可以实现页面常用特效和业务逻辑并进行封装</li>
+                    <li>
+                        <h5>Ajax&H5C3</h5> 能够熟练使用ajax进行前后端交互,熟练掌握H5C3新特性和动态特效</li>
+                    <li>
+                        <h5>框架&工具</h5>熟悉Vue.2.0/Bootstrap/gulp/webpack/git</li>
+                    <li>
+                        <h5>服务端</h5>熟悉Node.js，可以写基本的后端代码</li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="section three">
+            <div class='hc'>
+                <h4>Experience</h4>
+            </div>
+            <div class='exp'>
+                 <div class='work'>
+                    <h5>工作经验:2015.11 -- 2018.2</h5>
+                    <p>就职于合肥慧择网担任前端开发一职，主要负责通过html+css开发静态页面，
+                        通过原生JS和jquery开发动态效果以及业务逻辑，同时也进行ajax的交互,
+                        主要使用html,css,h5c3,javascript,jquery,<br>ajax,vue.js,webpack,es6等技术
+                    </p>
+                    <div class='blog'>博客地址:<a href="http://www.cnblogs.com/sharkJan/">鲨鱼余烁</a></div>
+                </div>
+                </div>
+              
+
+        </div>
+        <div class="section four">
+            <div class='hh'>
+                <div class='hp'><h4>Project</h4></div>
+            </div>
+            <div class='project'>
+                <p><span>仿小米官网</span>: 仿照小米官网自己制作的网站<a href="https://github.com/sharkShuo/mi"> 进入</a></p>
+                <p><span>360浏览器推荐页</span>: 使用h5c3、jquery、fullpage等技术开发的动态页面<a href="https://github.com/sharkShuo/360-"> 进入</a></p>
+                <p><span>登录页</span>: Node.js+bootstrap做的登录页<a href=""> 进入</a></p>
+            </div>
+        </div>
+        <div class="section five">
+            <div class='lasth'>
+                <h3>Is Me</h3>
+                <div class='line'></div>
+            </div>
+            <div class='code'>
+                <h4>热爱</h4>
+                <p>爱
+                    <span>代码</span>,也爱
+                    <span>geek</span>
+                </p>
+                <p>更爱
+                    <span>钻研</span>,
+                    <span>交流</span>,
+                    <span>分享</span>
+                </p>
+                <p>不认为有什么
+                    <span>最好</span>的语言</p>
+                <p>只有最
+                    <span>合适</span>的语言</p>
+                <p>
+                    <span>做前端</span>,抛开顾虑</p>
+                <p>只需要投入
+                    <span>激情</span>与
+                    <span>热爱</span>
+                </p>
+                </p>
+                <p>
+                    <span>我</span>,正在
+                    <span>路上</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src='./js/jquery-1.8.3.min.js'></script>
+    <script src='./js/jquery.fullPage.js'></script>
+    <script>
+        window.onresize = function () {
+
+            //范围：320   750
+
+            //获取屏幕的宽度
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+
+            document.documentElement.style.fontSize = screenWidth / 15 + "px";
+        }
+        window.onresize();
+        $(function () {
+            console.log($(window).width());
+             var span = $('#fp-nav li span');
+              $('#dowebok').fullpage({
+                sectionsColor: ['#1aa57b', '#168fe0', '#f1e318', '#1eb8cc', 'darkcyan'],
+                'navigation': $(window).width() < 1100? false: true,
+                'navigationColor': '#000',
+                  
+                afterLoad: function (anchorLink, index) {
+                    if( index == 1){
+                        $('.one h3').fadeIn(800);
+                    }
+                    if (index == 2) {
+                        $('.two h4').fadeIn(800);
+                        $('.person').addClass('now');
+                    } else if (index == 3) {
+                        $('.three').addClass('now');
+                    } else if (index == 4) {
+                        $('.hp h4').fadeIn(700);
+                        $('.project').fadeIn(1000);
+                    } else if (index == 5) {
+                        $('.five').addClass('now');
+                    }
+
+                },
+                onLeave: function (anchorLink, index) {
+                    if( index == 1){
+                        $('.one h3').css('display', 'none');
+                    }
+                    if (index == 2) {
+                        $('.two h4').css('display', 'none');
+                        $('.person').removeClass('now')
+                    } else if (index == 3) {
+                        $('.three').removeClass('now');
+                    } else if (index == 4) {
+                        $('.project').css('display', 'none');
+                        $('.hp h4').css('display', 'none');
+                    } else if (index == 5) {
+                        $('.five').removeClass('now');
+                    }
+
+                }
+
+});
+$(window).resize()
+           
+        });
+
+    </script>
+</body>
+
+</html>
